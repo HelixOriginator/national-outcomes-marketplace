@@ -1,0 +1,11 @@
+# robots.txt for National Outcomes Marketplace
+# Created for better SEO and search engine crawling
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://helixoriginator.github.io/national-outcomes-marketplace/sitemap.xml
+
+# Crawl-delay to be respectful to search engines
+Crawl-delay: 10
