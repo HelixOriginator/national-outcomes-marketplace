@@ -1,0 +1,1072 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="National Outcomes Marketplace - A revolutionary platform for outcome-based governance in India. Pay for results, not promises.">
+    <meta name="keywords" content="outcome-based governance, India governance, digital India, government innovation, results-based payments, NOM">
+    <title>National Outcomes Marketplace | Outcome-Based Governance for India</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --primary: #FF9933;
+            --secondary: #138808;
+            --accent: #4CAF50;
+            --dark: #0a0a0a;
+            --darker: #050505;
+            --card-bg: #1a1a1a;
+            --card-hover: #252525;
+            --light: #1e1e1e;
+            --white: #ffffff;
+            --text-primary: #e0e0e0;
+            --text-secondary: #a0a0a0;
+            --gradient: linear-gradient(135deg, #FF9933 0%, #138808 100%);
+            --border: #2a2a2a;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            color: var(--text-primary);
+            background: var(--dark);
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            color: var(--white);
+            padding: 120px 20px 80px;
+            position: relative;
+            overflow: hidden;
+            border-bottom: 2px solid var(--primary);
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 20% 50%, rgba(255, 153, 51, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(19, 136, 8, 0.1) 0%, transparent 50%);
+            opacity: 0.6;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            text-align: center;
+        }
+
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 20px;
+            color: var(--white);
+            box-shadow: 0 4px 15px rgba(255, 153, 51, 0.4);
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            color: var(--white);
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .subtitle {
+            font-size: 1.4rem;
+            font-weight: 400;
+            margin-bottom: 30px;
+            color: var(--text-primary);
+        }
+
+        .tagline {
+            font-size: 1.8rem;
+            font-weight: 700;
+            margin-bottom: 40px;
+            padding: 20px 30px;
+            background: linear-gradient(135deg, rgba(255, 153, 51, 0.15), rgba(19, 136, 8, 0.15));
+            border-radius: 10px;
+            border: 2px solid var(--primary);
+            color: var(--white);
+            box-shadow: 0 4px 20px rgba(255, 153, 51, 0.2);
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 40px;
+        }
+
+        .hero-highlights {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, rgba(255, 153, 51, 0.1), rgba(19, 136, 8, 0.1));
+            border: 2px solid var(--primary);
+            border-radius: 15px;
+            padding: 30px 25px;
+            text-align: center;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+        }
+
+        .highlight-box:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(255, 153, 51, 0.3);
+            border-color: var(--secondary);
+        }
+
+        .highlight-icon {
+            font-size: 3rem;
+            margin-bottom: 15px;
+        }
+
+        .highlight-box h3 {
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--primary);
+            margin-bottom: 10px;
+        }
+
+        .highlight-box p {
+            font-size: 1rem;
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .btn {
+            padding: 16px 40px;
+            font-size: 1.1rem;
+            font-weight: 700;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--primary) 0%, #ff6600 100%);
+            color: var(--white);
+            box-shadow: 0 4px 20px rgba(255, 153, 51, 0.5);
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(255, 153, 51, 0.7);
+            background: linear-gradient(135deg, #ff6600 0%, var(--primary) 100%);
+        }
+
+        .btn-secondary {
+            background: linear-gradient(135deg, var(--secondary) 0%, #0d6606 100%);
+            color: var(--white);
+            border: 2px solid var(--secondary);
+            box-shadow: 0 4px 20px rgba(19, 136, 8, 0.4);
+        }
+
+        .btn-secondary:hover {
+            background: linear-gradient(135deg, #0d6606 0%, var(--secondary) 100%);
+            transform: translateY(-3px);
+            box-shadow: 0 8px 30px rgba(19, 136, 8, 0.6);
+        }
+
+        /* Stats Section */
+        .stats {
+            background: var(--card-bg);
+            padding: 60px 20px;
+            box-shadow: 0 -5px 20px rgba(0, 0, 0, 0.3);
+            border-top: 1px solid var(--border);
+        }
+
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            text-align: center;
+        }
+
+        .stat-item h3 {
+            font-size: 3rem;
+            color: var(--primary);
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .stat-item p {
+            font-size: 1.1rem;
+            color: var(--text-secondary);
+        }
+
+        /* Section Styles */
+        section {
+            padding: 80px 20px;
+        }
+
+        .section-alt {
+            background: var(--darker);
+            border-top: 1px solid var(--border);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-header h2 {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--white);
+            margin-bottom: 15px;
+        }
+
+        .section-header p {
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* How It Works */
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .step {
+            background: var(--card-bg);
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+            transition: all 0.3s ease;
+            position: relative;
+            border: 1px solid var(--border);
+        }
+
+        .step:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(255, 153, 51, 0.3);
+            border-color: var(--primary);
+        }
+
+        .step-number {
+            position: absolute;
+            top: -20px;
+            left: 30px;
+            width: 50px;
+            height: 50px;
+            background: var(--gradient);
+            color: var(--white);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+            font-weight: 800;
+            box-shadow: 0 4px 15px rgba(255, 153, 51, 0.4);
+        }
+
+        .step h3 {
+            font-size: 1.4rem;
+            margin-top: 20px;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .step ul {
+            list-style: none;
+            margin-top: 15px;
+        }
+
+        .step ul li {
+            padding: 8px 0 8px 25px;
+            position: relative;
+            color: var(--text-secondary);
+        }
+
+        .step ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+            font-weight: bold;
+        }
+
+        /* Benefits Grid */
+        .benefits-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .benefit-card {
+            background: var(--card-bg);
+            padding: 35px 25px;
+            border-radius: 15px;
+            border-left: 5px solid var(--secondary);
+            transition: all 0.3s ease;
+            border: 1px solid var(--border);
+            border-left: 5px solid var(--secondary);
+        }
+
+        .benefit-card:hover {
+            border-left-color: var(--primary);
+            box-shadow: 0 10px 30px rgba(255, 153, 51, 0.2);
+            background: var(--card-hover);
+        }
+
+        .benefit-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .benefit-card h3 {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+            color: var(--white);
+        }
+
+        .benefit-card p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        /* Innovation Section */
+        .innovation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 40px;
+            margin-top: 40px;
+        }
+
+        .innovation-card {
+            background: linear-gradient(135deg, #1a1a1a 0%, #2d2d2d 100%);
+            color: var(--white);
+            padding: 40px 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+            border: 1px solid var(--border);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .innovation-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: var(--gradient);
+        }
+
+        .innovation-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .innovation-card p {
+            opacity: 0.9;
+            line-height: 1.8;
+            color: var(--text-primary);
+        }
+
+        /* Digital India Ready */
+        .digital-india {
+            background: linear-gradient(135deg, rgba(255, 153, 51, 0.1), rgba(19, 136, 8, 0.1));
+            padding: 60px 40px;
+            border-radius: 20px;
+            text-align: center;
+            border: 1px solid var(--border);
+        }
+
+        .digital-india h3 {
+            font-size: 2rem;
+            color: var(--primary);
+            margin-bottom: 20px;
+        }
+
+        .digital-india-points {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 30px;
+            text-align: left;
+        }
+
+        .digital-point {
+            background: var(--card-bg);
+            padding: 25px;
+            border-radius: 10px;
+            box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+            border: 1px solid var(--border);
+            transition: all 0.3s ease;
+        }
+
+        .digital-point:hover {
+            transform: translateY(-5px);
+            border-color: var(--primary);
+        }
+
+        .digital-point strong {
+            color: var(--primary);
+            font-size: 1.1rem;
+        }
+
+        .digital-point p {
+            color: var(--text-secondary);
+        }
+
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a1a1a 100%);
+            color: var(--white);
+            text-align: center;
+            padding: 80px 20px;
+            border-top: 2px solid var(--primary);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: 
+                radial-gradient(circle at 30% 40%, rgba(255, 153, 51, 0.08) 0%, transparent 50%),
+                radial-gradient(circle at 70% 60%, rgba(19, 136, 8, 0.08) 0%, transparent 50%);
+            z-index: 0;
+        }
+
+        .cta-section .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-section h2 {
+            font-size: 2.8rem;
+            margin-bottom: 15px;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .cta-section > .container > p:first-of-type {
+            font-size: 1.3rem;
+            margin-bottom: 50px;
+            color: var(--text-primary);
+            font-weight: 400;
+        }
+
+        .implementation-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+            text-align: left;
+        }
+
+        .implementation-card {
+            background: var(--card-bg);
+            border: 2px solid var(--border);
+            border-radius: 15px;
+            padding: 35px 30px;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .implementation-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary), var(--secondary));
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .implementation-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .implementation-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--primary);
+            background: var(--card-hover);
+            box-shadow: 0 15px 40px rgba(255, 153, 51, 0.2);
+        }
+
+        .step-badge {
+            display: inline-block;
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            color: var(--white);
+            padding: 10px 24px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            box-shadow: 0 4px 15px rgba(255, 153, 51, 0.3);
+        }
+
+        .implementation-card h3 {
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+            color: var(--white);
+            font-weight: 700;
+        }
+
+        .implementation-card ul {
+            list-style: none;
+        }
+
+        .implementation-card ul li {
+            padding: 12px 0 12px 30px;
+            position: relative;
+            color: var(--text-primary);
+            line-height: 1.7;
+            font-size: 1.05rem;
+        }
+
+        .implementation-card ul li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--secondary);
+            font-weight: bold;
+            font-size: 1.3rem;
+        }
+
+        .key-enablers {
+            margin-top: 70px;
+            padding: 45px 40px;
+            background: var(--card-bg);
+            border-radius: 20px;
+            border: 2px solid var(--border);
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .key-enablers h3 {
+            background: linear-gradient(135deg, var(--primary), var(--secondary));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .enabler-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .enabler-tag {
+            background: linear-gradient(135deg, rgba(255, 153, 51, 0.15), rgba(19, 136, 8, 0.15));
+            color: var(--white);
+            padding: 14px 28px;
+            border-radius: 50px;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: all 0.3s ease;
+            cursor: default;
+            border: 1px solid var(--border);
+        }
+
+        .enabler-tag:hover {
+            transform: scale(1.05);
+            background: linear-gradient(135deg, rgba(255, 153, 51, 0.25), rgba(19, 136, 8, 0.25));
+            border-color: var(--primary);
+            box-shadow: 0 5px 20px rgba(255, 153, 51, 0.3);
+        }
+
+        .cta-section > .container > p:last-of-type {
+            margin-top: 50px;
+            font-size: 1.2rem;
+            color: var(--text-primary);
+            line-height: 1.8;
+        }
+
+        .cta-section > .container > p:last-of-type strong {
+            color: var(--primary);
+            font-size: 1.3rem;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--darker);
+            color: var(--white);
+            padding: 40px 20px;
+            text-align: center;
+            border-top: 1px solid var(--border);
+        }
+
+        footer p {
+            opacity: 0.8;
+            margin-bottom: 10px;
+            color: var(--text-secondary);
+        }
+
+        .footer-links {
+            margin-top: 20px;
+        }
+
+        .footer-links a {
+            color: var(--primary);
+            text-decoration: none;
+            margin: 0 15px;
+            opacity: 0.8;
+            transition: opacity 0.3s;
+        }
+
+        .footer-links a:hover {
+            opacity: 1;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .subtitle {
+                font-size: 1.1rem;
+            }
+
+            .tagline {
+                font-size: 1.3rem;
+            }
+
+            .section-header h2 {
+                font-size: 2rem;
+            }
+
+            .cta-buttons {
+                flex-direction: column;
+            }
+
+            .btn {
+                width: 100%;
+            }
+
+            .hero-highlights {
+                grid-template-columns: 1fr;
+            }
+
+            .implementation-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .enabler-tags {
+                gap: 10px;
+            }
+
+            .enabler-tag {
+                font-size: 0.85rem;
+                padding: 10px 18px;
+            }
+        }
+
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .hero-content > * {
+            animation: fadeInUp 0.8s ease-out;
+        }
+
+        .hero-content > *:nth-child(2) {
+            animation-delay: 0.1s;
+        }
+
+        .hero-content > *:nth-child(3) {
+            animation-delay: 0.2s;
+        }
+
+        .hero-content > *:nth-child(4) {
+            animation-delay: 0.3s;
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <div class="hero-content container">
+            <div class="badge">🇮🇳 Innovation for India</div>
+            <h1>National Outcomes Marketplace</h1>
+            <p class="subtitle">India's First Outcome-Based Governance Platform</p>
+            <p class="tagline">Pay for Results, Not Promises</p>
+            <div class="hero-highlights">
+                <div class="highlight-box">
+                    <div class="highlight-icon">🎯</div>
+                    <h3>Outcome-Driven</h3>
+                    <p>Government pays only for verified, measurable results—not activities or promises</p>
+                </div>
+                <div class="highlight-box">
+                    <div class="highlight-icon">💡</div>
+                    <h3>Innovation Unleashed</h3>
+                    <p>Startups, NGOs, and citizens compete to deliver the best cost-per-outcome solutions</p>
+                </div>
+                <div class="highlight-box">
+                    <div class="highlight-icon">🔍</div>
+                    <h3>Fraud-Resistant</h3>
+                    <p>Standardized verification through outcome proof rails and tamper-resistant audit ledgers</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Stats Section -->
+    <div class="stats">
+        <div class="container stats-grid">
+            <div class="stat-item">
+                <h3>100%</h3>
+                <p>Outcome Verification</p>
+            </div>
+            <div class="stat-item">
+                <h3>Zero</h3>
+                <p>Payment Without Results</p>
+            </div>
+            <div class="stat-item">
+                <h3>1.4B</h3>
+                <p>Citizens Benefiting</p>
+            </div>
+            <div class="stat-item">
+                <h3>∞</h3>
+                <p>Innovation Potential</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- The Big Idea -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <h2>The Revolutionary Idea</h2>
+                <p>A government-run, open digital marketplace where ministries, states, districts, startups, NGOs, and citizen groups can buy and sell <strong>verified outcomes</strong>, not inputs.</p>
+            </div>
+            <div class="digital-india">
+                <h3>🎯 The Problem We're Solving</h3>
+                <p style="font-size: 1.2rem; margin-top: 20px; color: var(--text-primary);">Most government programs pay for <strong>activities</strong> — trainings conducted, toilets built, devices distributed, saplings planted. But <strong>outcomes</strong> are what truly matter: jobs sustained, toilets used, learning improved, trees surviving, treatment completed.</p>
+                <p style="font-size: 1.3rem; margin-top: 25px; color: var(--primary); font-weight: 600;">NOM flips procurement from input-based to outcome-based at national scale.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works -->
+    <section id="how-it-works" class="section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>How It Works</h2>
+                <p>Four simple steps to transform governance</p>
+            </div>
+            <div class="steps">
+                <div class="step">
+                    <div class="step-number">A</div>
+                    <h3>Government Posts Outcome Contracts</h3>
+                    <p>Ministries, states, or districts post contracts with clear targets:</p>
+                    <ul>
+                        <li>Reduce dropout rate by X%</li>
+                        <li>85% TB treatment completion</li>
+                        <li>Increase groundwater by Z cm</li>
+                        <li>70% waste segregation</li>
+                        <li>Improve literacy by X points</li>
+                    </ul>
+                    <p style="margin-top: 15px;"><strong>Each includes:</strong> Target metric, time window, payment per result, standardized measurement method</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">B</div>
+                    <h3>Implementers Bid & Deliver</h3>
+                    <p>Startups, NGOs, SHGs, universities, or citizen consortia compete with:</p>
+                    <ul>
+                        <li>Innovative approach</li>
+                        <li>Cost per outcome unit</li>
+                        <li>Proof of capacity</li>
+                    </ul>
+                    <p style="margin-top: 15px; color: var(--secondary); font-weight: 600;">Best solution wins, not best connections.</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">C</div>
+                    <h3>Outcome Proof Rails Verify</h3>
+                    <p>Standardized verification using:</p>
+                    <ul>
+                        <li>Existing government datasets</li>
+                        <li>Third-party audits</li>
+                        <li>Sample surveys</li>
+                        <li>Geo-tagged proof</li>
+                        <li>Tamper-resistant logs</li>
+                    </ul>
+                    <p style="margin-top: 15px;"><strong>Principle:</strong> Auditable and reproducible evidence</p>
+                </div>
+
+                <div class="step">
+                    <div class="step-number">D</div>
+                    <h3>Payment Only for Outcomes</h3>
+                    <p>Results trigger payments automatically:</p>
+                    <ul>
+                        <li>Reduces waste immediately</li>
+                        <li>Rewards innovation</li>
+                        <li>Exposes ineffective programs</li>
+                        <li>Enables state-to-state comparison</li>
+                    </ul>
+                    <p style="margin-top: 15px; color: var(--secondary); font-weight: 600;">No results = No payment. Period.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Benefits -->
+    <section id="benefits">
+        <div class="container">
+            <div class="section-header">
+                <h2>Why This Changes Everything</h2>
+                <p>PM-ready arguments for national transformation</p>
+            </div>
+            <div class="benefits-grid">
+                <div class="benefit-card">
+                    <div class="benefit-icon">💰</div>
+                    <h3>Massive Efficiency</h3>
+                    <p>Outcome-based models reduce leakage and force implementers to optimize. Every rupee now delivers measurable results.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">🚀</div>
+                    <h3>Competition Drives Quality</h3>
+                    <p>Multiple implementers compete on cost per outcome, driving continuous innovation and best practices.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">🔄</div>
+                    <h3>Federal Learning Loop</h3>
+                    <p>When one district cracks a model, it becomes a reusable outcome playbook for the entire nation.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">🎯</div>
+                    <h3>Innovation-Friendly Procurement</h3>
+                    <p>Outcomes become the procurement unit. Startups and innovators can finally compete with traditional vendors.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">📊</div>
+                    <h3>Real-Time Accountability</h3>
+                    <p>Citizens can see which programs work and which don't, creating unprecedented transparency.</p>
+                </div>
+
+                <div class="benefit-card">
+                    <div class="benefit-icon">🌍</div>
+                    <h3>Global Leadership</h3>
+                    <p>India becomes the first country to implement outcome-based governance at national scale.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Innovation -->
+    <section class="section-alt">
+        <div class="container">
+            <div class="section-header">
+                <h2>The Innovation: Outcome Units & Ledger</h2>
+                <p>Standardization meets accountability</p>
+            </div>
+            <div class="innovation-grid">
+                <div class="innovation-card">
+                    <h3>📏 Outcome Units</h3>
+                    <p><strong>Standardized result units:</strong></p>
+                    <p style="margin-top: 15px;">
+                        • One child retained for one academic year<br>
+                        • One household segregating waste for 6 months<br>
+                        • One patient completing treatment protocol<br>
+                        • One hectare with 24-month survival rate
+                    </p>
+                    <p style="margin-top: 15px; font-weight: 600;">Clear, measurable, comparable.</p>
+                </div>
+
+                <div class="innovation-card">
+                    <h3>📖 Outcome Ledger</h3>
+                    <p><strong>Government-grade audit trail:</strong></p>
+                    <p style="margin-top: 15px;">
+                        • Who claimed outcomes<br>
+                        • What proof was submitted<br>
+                        • What verification approved it<br>
+                        • What payment was triggered
+                    </p>
+                    <p style="margin-top: 15px; font-weight: 600;">Prevents double-counting, ghost beneficiaries, inflated reporting.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- India Ready -->
+    <section>
+        <div class="container">
+            <div class="section-header">
+                <h2>Why India Can Do This Today</h2>
+                <p>We already have the building blocks</p>
+            </div>
+            <div class="digital-india">
+                <h3>🇮🇳 Digital India Infrastructure is Ready</h3>
+                <div class="digital-india-points">
+                    <div class="digital-point">
+                        <strong>National Scale Platforms</strong>
+                        <p style="margin-top: 10px;">India already runs national digital platforms. MyGov exists for crowdsourcing ideas and participation.</p>
+                    </div>
+                    <div class="digital-point">
+                        <strong>Innovate India Challenges</strong>
+                        <p style="margin-top: 10px;">Challenge platform routinely hosts problem statements with pathways to incubation and procurement.</p>
+                    </div>
+                    <div class="digital-point">
+                        <strong>Digital Public Infrastructure</strong>
+                        <p style="margin-top: 10px;">JAM trinity, UPI, Aadhaar, DigiLocker prove India can build and scale digital governance.</p>
+                    </div>
+                    <div class="digital-point">
+                        <strong>GovTech Ecosystem</strong>
+                        <p style="margin-top: 10px;">Strong procurement ecosystems and digital rails already exist. NOM adds the missing layer: outcomes as procurement units.</p>
+                    </div>
+                </div>
+                <p style="margin-top: 40px; font-size: 1.4rem; color: var(--primary); font-weight: 700;">The pitch is simple: Let's create the outcomes layer as a national platform.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA -->
+    <section class="cta-section">
+        <div class="container">
+            <h2>Ready for Implementation</h2>
+            <p>Building on India's existing digital infrastructure to transform governance at scale</p>
+            
+            <div class="implementation-grid">
+                <div class="implementation-card">
+                    <div class="step-badge">Phase 1</div>
+                    <h3>Platform Development</h3>
+                    <ul>
+                        <li>Build National Outcomes Marketplace portal</li>
+                        <li>Integrate with existing government datasets</li>
+                        <li>Develop Outcome Proof Rails infrastructure</li>
+                        <li>Create Outcome Ledger system</li>
+                    </ul>
+                </div>
+                
+                <div class="implementation-card">
+                    <div class="step-badge">Phase 2</div>
+                    <h3>Pilot Programs</h3>
+                    <ul>
+                        <li>Launch in 5-10 selected districts</li>
+                        <li>Test with 3-5 outcome categories</li>
+                        <li>Onboard startups, NGOs, and implementers</li>
+                        <li>Refine verification mechanisms</li>
+                    </ul>
+                </div>
+                
+                <div class="implementation-card">
+                    <div class="step-badge">Phase 3</div>
+                    <h3>National Rollout</h3>
+                    <ul>
+                        <li>Scale to all states and UTs</li>
+                        <li>Expand to 20+ outcome categories</li>
+                        <li>Integrate with MyGov and Innovate India</li>
+                        <li>Establish federal learning repository</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="key-enablers">
+                <h3 style="margin-bottom: 25px; font-size: 1.8rem;">Key Enablers Already in Place</h3>
+                <div class="enabler-tags">
+                    <span class="enabler-tag">Digital India Infrastructure</span>
+                    <span class="enabler-tag">JAM Trinity</span>
+                    <span class="enabler-tag">UPI Payment Rails</span>
+                    <span class="enabler-tag">MyGov Platform</span>
+                    <span class="enabler-tag">Aadhaar Authentication</span>
+                    <span class="enabler-tag">DigiLocker</span>
+                    <span class="enabler-tag">GovTech Ecosystem</span>
+                    <span class="enabler-tag">Startup India Network</span>
+                </div>
+            </div>
+
+            <p style="margin-top: 40px; font-size: 1.2rem; color: var(--text-primary);">
+                <strong>This is not a future vision—this is implementable today.</strong><br>
+                India has the infrastructure, the talent, and the ambition to become the world's first outcome-based governance nation.
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p><strong>National Outcomes Marketplace (NOM)</strong></p>
+            <p>Outcome-Based Governance as a Platform</p>
+            <p style="margin-top: 20px; font-size: 0.9rem;">A citizen-driven innovation concept for transforming Indian governance</p>
+            <p style="margin-top: 20px; font-size: 0.85rem; opacity: 0.6;">Built with ❤️ for India | Pay for Results, Not Promises</p>
+            <div class="footer-links">
+                <a href="https://www.mygov.in/" target="_blank">MyGov</a>
+                <a href="https://innovateindia.mygov.in/" target="_blank">Innovate India</a>
+                <a href="https://digitalindia.gov.in/" target="_blank">Digital India</a>
+            </div>
+            <p style="margin-top: 30px; font-size: 0.95rem; color: var(--primary); font-weight: 600;">
+                Created by Kallol Chakrabarti, Global Independent Researcher
+            </p>
+        </div>
+    </footer>
+</body>
+</html>
